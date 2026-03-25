@@ -8,3 +8,8 @@ Este é im sistema simples desenvolvido para fins de estudo, que calcula o índi
 
 ## como fuciona 
 O código recebe as variáveis de peso e altua, realiza o cálculo matemático e exibe a classificação ( Abaixo do Peso, Peso ideal, etc.) diretamente no navegador
+
+EX: Peso: 70 kg
+Altura: 1.75 m
+IMC: 22.86
+Classificação: Peso normal
