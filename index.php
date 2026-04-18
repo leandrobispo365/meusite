@@ -1,45 +1,92 @@
 <?php
-
-// Função para calcular o IMC
-function calcularIMC($peso, $altura) {
-    return $peso / ($altura * $altura);
+    $sql = "INSERT INTO posts (titulo,conteudo) VALUES ('$titulo','$conteudo')";
+    $conn->query($sql);
 }
 
-// Função para classificar o IMC
-function classificarIMC($imc) {
-    if ($imc < 18.5) {
-        return "Abaixo do peso";
-    } elseif ($imc < 25) {
-        return "Peso normal";
-    } elseif ($imc < 30) {
-        return "Sobrepeso";
-    } elseif ($imc < 35) {
-        return "Obesidade grau I";
-    } elseif ($imc < 40) {
-        return "Obesidade grau II";
-    } else {
-        return "Obesidade grau III (mórbida)";
-    }
+if (isset($_GET['deletar'])) {
+    $id = $_GET['deletar'];
+    $conn->query("DELETE FROM posts WHERE id=$id");
 }
-
-// Dados de entrada (você pode mudar)
-$peso = 70;
-$altura = 1.75;
-
-// Validação
-if ($peso <= 0 || $altura <= 0) {
-    echo "Erro: valores inválidos!";
-    exit;
-}
-
-// Cálculo
-$imc = calcularIMC($peso, $altura);
-
-// Saída formatada
-echo "Peso: " . $peso . " kg<br>";
-echo "Altura: " . $altura . " m<br>";
-echo "IMC: " . number_format($imc, 2) . "<br>";
-echo "Classificação: " . classificarIMC($imc);
 
 ?>
-    
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meu Site PHP</title>
+</head>
+<body>
+
+<h1>Meu Site</h1>
+
+<?php if (!isset($_SESSION['user'])): ?>
+
+<h2>Login</h2>
+<form method="POST">
+    Email: <input type="email" name="email"><br>
+    Senha: <input type="password" name="senha"><br>
+    <button name="login">Entrar</button>
+</form>
+
+<h2>Cadastro</h2>
+<form method="POST">
+    Nome: <input type="text" name="nome"><br>
+    Email: <input type="email" name="email"><br>
+    Senha: <input type="password" name="senha"><br>
+    <button name="cadastrar">Cadastrar</button>
+</form>
+
+<?php else: ?>
+
+<h2>Bem-vindo <?php echo $_SESSION['user']; ?></h2>
+<a href="?logout=1">Sair</a>
+
+<h2>Criar Post</h2>
+<form method="POST">
+    Título: <input type="text" name="titulo"><br>
+    Conteúdo: <textarea name="conteudo"></textarea><br>
+    <button name="postar">Postar</button>
+</form>
+
+<h2>Posts</h2>
+
+<?php
+$res = $conn->query("SELECT * FROM posts");
+while ($row = $res->fetch_assoc()) {
+    echo "<h3>".$row['titulo']."</h3>";
+    echo "<p>".$row['conteudo']."</p>";
+    echo "<a href='?deletar=".$row['id']."'>Deletar</a><hr>";
+}
+?>
+
+<?php endif; ?>
+
+<?php
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: index.php");
+}
+?>
+
+</body>
+</html>
+
+-- SQL PARA CRIAR O BANCO --
+
+CREATE DATABASE meusite;
+
+USE meusite;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    senha VARCHAR(100)
+);
+
+CREATE TABLE posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255),
+    conteudo TEXT
+);
+?>
