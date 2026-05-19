@@ -1,4 +1,4 @@
-,# 💻 Projeto PHP 
+,# Projeto PHP 
 
 ## Sobre o Projeto
 Este projeto foi desenvolvido para praticar conceitos básicos de PHP, HTML e lógica de programação no curso técnico de redes.
