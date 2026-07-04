@@ -1,0 +1,6 @@
+{"nome":"Leandro Bispo Dos Santos","endereco":"45 Rua Alegre","cpf":"088.048.014-92","email":"lekinhobispodos.lb@gmail.com","curso":"Técnico em Redes de Computadores"}
+{"nome":"Leandro Bispo Dos Santos","endereco":"45 Rua Alegre","cpf":"088.048.014-92","email":"lekinhobispodos.lb@gmail.com","curso":"Técnico em Redes de Computadores"}
+{"nome":"Leandro Bispo Dos Santos","endereco":"45 Rua Alegre","cpf":"702.152.964-35","email":"lekinhobispodos.lb@gmail.com","curso":"Técnico em Redes de Computadores"}
+{"nome":"Leandro Bispo Dos Santos","endereco":"45 Rua Alegre","cpf":"702.152.964-35","email":"lekinhobispodos.lb@gmail.com","curso":"Técnico em Redes de Computadores"}
+{"nome":"Leandro Bispo Dos Santos","endereco":"45 Rua Alegre","cpf":"702.152.964-35","email":"lekinhobispodos.lb@gmail.com","curso":"Desenvolvimento de Sistemas"}
+{"nome":"Leandro Bispo Dos Santos","endereco":"45 Rua Alegre","cpf":"702.152.964-35","email":"lekinhobispodos.lb@gmail.com","curso":"Desenvolvimento de Sistemas"}
