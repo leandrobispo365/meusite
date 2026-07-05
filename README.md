@@ -1,4 +1,4 @@
-# 🏫 Sistema de Gestão de Matrículas - ConectaJá
+# 🏫 Sistema de Gestão de Matrículas 
 
 <p align="center">
   <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
@@ -36,8 +36,8 @@ Este é um sistema de *Gestão e Registro de Matrículas* desenvolvido em PHP es
 ## 💻 Como Executar a Aplicação
 
 1. Certifique-se de ter um servidor Apache com suporte a PHP ativo (como o XAMPP).
-2. Clone ou baixe este projeto para dentro do diretório raiz do seu servidor (ex: `C:\xampp\htdocs\conectaja`).
-3. Abra seu navegador e acesse: `http://localhost/conectaja`.
+2. Clone ou baixe este projeto para dentro do diretório raiz do seu servidor (ex: `C:\xampp\htdocs\meusite`).
+3. Abra seu navegador e acesse: `http://localhost/meusite/index.php`.
 
 ### 🔑 Credenciais de Acesso para Teste:
 * **Usuário:** leandro
